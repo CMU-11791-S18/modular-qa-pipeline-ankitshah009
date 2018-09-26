@@ -8,7 +8,7 @@ from CountFeaturizer import CountFeaturizer
 from Classifier import Classifier
 from MultinomialNaiveBayes import MultinomialNaiveBayes
 from Evaluator import Evaluator
-
+import numpy as np
 
 
 class Pipeline(object):
@@ -41,11 +41,12 @@ class Pipeline(object):
 	def question_answering(self):
 		dataset_type = self.trainData['origin']
 		candidate_answers = self.trainData['candidates']
-		X_train, Y_train = self.makeXY(self.trainData['questions'][0:10])
+		X_train, Y_train = self.makeXY(self.trainData['questions'][0:4000])
 		X_val, Y_val_true = self.makeXY(self.valData['questions'])
 
 		#featurization
 		X_features_train, X_features_val = self.featurizerInstance.getFeatureRepresentation(X_train, X_val)
+		print np.shape(X_features_train), np.shape(X_features_val)
 		self.clf = self.classifierInstance.buildClassifier(X_features_train, Y_train)
 		
 		#Prediction
@@ -66,6 +67,36 @@ if __name__ == '__main__':
 	trainFilePath = sys.argv[1] #please give the path to your reformatted quasar-s json train file
 	valFilePath = sys.argv[2] # provide the path to val file
 	retrievalInstance = Retrieval()
+<<<<<<< HEAD
+	if sys.argv[3] == "NaiveBayes":
+		print "Naive Bayes and count features"
+		classifierInstance = MultinomialNaiveBayes()
+		featurizerInstance = CountFeaturizer()
+		trainInstance = Pipeline(trainFilePath, valFilePath, retrievalInstance, featurizerInstance, classifierInstance)
+		print "Naive Bayes and TFIDF features"
+		classifierInstance = MultinomialNaiveBayes()
+		featurizerInstance = TfidfFeaturizer()
+		trainInstance = Pipeline(trainFilePath, valFilePath, retrievalInstance, featurizerInstance, classifierInstance)
+	elif sys.argv[3] == "SVM":
+		print "SVM and Count features"
+		classifierInstance = SVM()
+		featurizerInstance = CountFeaturizer()
+		trainInstance = Pipeline(trainFilePath, valFilePath, retrievalInstance, featurizerInstance, classifierInstance)
+		print "SVM and TfIDF features"
+		classifierInstance = SVM()
+		featurizerInstance = TfidfFeaturizer()
+		trainInstance = Pipeline(trainFilePath, valFilePath, retrievalInstance, featurizerInstance, classifierInstance)
+	elif sys.argv[3] == "MLP":
+		print "MLP and Count features"
+		classifierInstance = MLP()
+		featurizerInstance = CountFeaturizer()
+		trainInstance = Pipeline(trainFilePath, valFilePath, retrievalInstance, featurizerInstance, classifierInstance)
+		print "MLP and TfIDF features"
+		classifierInstance = MLP()
+		featurizerInstance = TfidfFeaturizer()
+		trainInstance = Pipeline(trainFilePath, valFilePath, retrievalInstance, featurizerInstance, classifierInstance)
+=======
 	featurizerInstance = CountFeaturizer()
 	classifierInstance = MultinomialNaiveBayes()
 	trainInstance = Pipeline(trainFilePath, valFilePath, retrievalInstance, featurizerInstance, classifierInstance)
+>>>>>>> parent of 08b3633... Updating files
