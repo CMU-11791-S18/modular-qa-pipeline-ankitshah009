@@ -67,7 +67,6 @@ if __name__ == '__main__':
 	trainFilePath = sys.argv[1] #please give the path to your reformatted quasar-s json train file
 	valFilePath = sys.argv[2] # provide the path to val file
 	retrievalInstance = Retrieval()
-<<<<<<< HEAD
 	if sys.argv[3] == "NaiveBayes":
 		print "Naive Bayes and count features"
 		classifierInstance = MultinomialNaiveBayes()
@@ -95,8 +94,3 @@ if __name__ == '__main__':
 		classifierInstance = MLP()
 		featurizerInstance = TfidfFeaturizer()
 		trainInstance = Pipeline(trainFilePath, valFilePath, retrievalInstance, featurizerInstance, classifierInstance)
-=======
-	featurizerInstance = CountFeaturizer()
-	classifierInstance = MultinomialNaiveBayes()
-	trainInstance = Pipeline(trainFilePath, valFilePath, retrievalInstance, featurizerInstance, classifierInstance)
->>>>>>> parent of 08b3633... Updating files
