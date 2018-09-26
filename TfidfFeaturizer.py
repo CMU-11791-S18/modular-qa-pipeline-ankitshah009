@@ -4,7 +4,7 @@ from sklearn.naive_bayes import MultinomialNB
 
 
 #This is a subclass that extends the abstract class Featurizer.
-class CountFeaturizer(Featurizer):
+class TfidfFeaturizer(Featurizer):
 
 	#The abstract method from the base class is implemeted here to return count features
 	def getFeatureRepresentation(self, X_train, X_val):
