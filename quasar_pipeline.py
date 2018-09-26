@@ -8,6 +8,8 @@ from CountFeaturizer import CountFeaturizer
 from Classifier import Classifier
 from MultinomialNaiveBayes import MultinomialNaiveBayes
 from Evaluator import Evaluator
+from SVM import SVM
+from MLP import MLP
 import numpy as np
 
 
