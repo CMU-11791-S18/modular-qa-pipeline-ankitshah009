@@ -45,7 +45,7 @@ class Pipeline(object):
 	def question_answering(self):
 		dataset_type = self.trainData['origin']
 		candidate_answers = self.trainData['candidates']
-		X_train, Y_train = self.makeXY(self.trainData['questions'][0:100])
+		X_train, Y_train = self.makeXY(self.trainData['questions'][0:4000])
 		X_val, Y_val_true = self.makeXY(self.valData['questions'])
 		with open('Y_val_true.txt','wb') as f:
 			pickle.dump(Y_val_true,f)
