@@ -1,2 +1,4 @@
 Command to run the assignment
+bash get_data.sh
+bash extract.sh
 bash run_command.sh
