@@ -6,6 +6,7 @@ from Retrieval import Retrieval
 from Featurizer import Featurizer
 from CountFeaturizer import CountFeaturizer
 from TfidfFeaturizer import TfidfFeaturizer
+from HashingVectorizer import HashingVectorizer
 from Classifier import Classifier
 from MultinomialNaiveBayes import MultinomialNaiveBayes
 from Evaluator import Evaluator
@@ -106,3 +107,9 @@ if __name__ == '__main__':
 		classifierInstance = MLP()
 		featurizerInstance = TfidfFeaturizer()
 		trainInstance = Pipeline(trainFilePath, valFilePath, retrievalInstance, featurizerInstance, classifierInstance)
+	elif sys.argv[3] == "NBHash":
+		print "Naive bayes and hash vectorizer feature"
+		classifierInstance = MultinomialNaiveBayes()
+		featurizerInstance = HashingVectorizer()
+		trainInstance = Pipeline(trainFilePath, valFilePath, retrievalInstance, featurizerInstance, classifierInstance)
+		train
