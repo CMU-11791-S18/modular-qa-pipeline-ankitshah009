@@ -1,4 +1,9 @@
 Command to run the assignment
 bash get_data.sh
 bash extract.sh
-bash run_command.sh
+bash run_command_all.sh
+
+The assignment is to learn about the different modules in a Question Answering pipeline, including modules that are trained using machine learning, and b) to create a simple end-to-end QA system using a real training/test dataset. We will be using off-the-shelf tools to cover the two basic steps in component training: a) creating feature vectors (training instances) from the data set, and b) training and evaluating machine learning models on the data set (test instances).
+
+We observe that count based features are performing better as compared with the tfidf features which could be possibly due to the smaller number of instances and high class imbalance in the dataset. 
+
