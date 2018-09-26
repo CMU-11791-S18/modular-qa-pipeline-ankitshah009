@@ -1,0 +1,10 @@
+sh run_command_NBtfidf.sh
+Naive Bayes and TFIDF features
+(31049, 357497) (3139, 357497)
+[u'web' u's' u's' ... u'web' u's' u's']
+/home/aps1/.anaconda2/lib/python2.7/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+  Accuracy: 0.05829882128066263
+  Precision: 0.020138032533898873
+  Recall: 0.05829882128066263
+  F-measure: 0.01356077321865980
