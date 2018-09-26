@@ -5,6 +5,7 @@ from sklearn.externals import joblib
 from Retrieval import Retrieval
 from Featurizer import Featurizer
 from CountFeaturizer import CountFeaturizer
+from TfidfFeaturizer import TfidfFeaturizer
 from Classifier import Classifier
 from MultinomialNaiveBayes import MultinomialNaiveBayes
 from Evaluator import Evaluator
