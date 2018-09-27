@@ -43,3 +43,32 @@ MLP and Count features
   Precision: 0.023214900236158003
   Recall: 0.07231602421153234
   F-measure: 0.026245566062002026
+
+==========
+MIN DF = 4
+==========
+ [aps1@compute-0-111 modular-qa-pipeline-ankitshah009]$ bash  run_command_NBCount.sh
+ Naive Bayes and count features
+ (31049, 108318) (3139, 108318)
+ [u'php' u's' u'api' ... u's' u'android' u'database']
+ /home/aps1/.anaconda2/lib/python2.7/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+   'precision', 'predicted', average, warn_for)
+   Accuracy: 0.133800573431029
+   Precision: 0.06827271090314406
+   Recall: 0.133800573431029
+   F-measure: 0.07713982852199792
+
+=========
+MIN DF = 5
+=========
+[aps1@compute-0-111 modular-qa-pipeline-ankitshah009]$ bash  run_command_NBCount.sh
+Naive Bayes and count features
+
+(31049, 81856) (3139, 81856)
+[u'php' u's' u'api' ... u's' u'android' u'version-control']
+/home/aps1/.anaconda2/lib/python2.7/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+  Accuracy: 0.14144632048423064
+  Precision: 0.07900772136860693
+  Recall: 0.14144632048423064
+  F-measure: 0.08589357428512874

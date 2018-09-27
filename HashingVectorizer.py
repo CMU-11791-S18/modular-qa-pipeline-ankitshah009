@@ -13,6 +13,6 @@ class HashingVectorizer(Featurizer):
 	# This scheme is useful for the larger corpus, larger vocabulary will grow in size and in memory usage as well. 
 	def getFeatureRepresentation(self, X_train, X_val):
 		hash_vect = HashingVectorizer()
-		X_train_hashes = hash_vect.fit_transform(X_train)
+		X_train_hashes = hash_vect.transform(X_train)
 		X_val_hashes = hash_vect.transform(X_val)
 		return X_train_hashes, X_val_hashes
