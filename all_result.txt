@@ -1,4 +1,3 @@
-sh run_command_NBtfidf.sh
 Naive Bayes and TFIDF features
 (31049, 357497) (3139, 357497)
 [u'web' u's' u's' ... u'web' u's' u's']
@@ -36,3 +35,11 @@ SVM and Count features
   Precision: 0.01130604204982926
   Recall: 0.05734310289901243
   F-measure: 0.011425985904728998
+
+
+MLP and Count features
+(31049, 357497) (3139, 357497)
+  Accuracy: 0.07231602421153234
+  Precision: 0.023214900236158003
+  Recall: 0.07231602421153234
+  F-measure: 0.026245566062002026
