@@ -72,3 +72,52 @@ Naive Bayes and count features
   Precision: 0.07900772136860693
   Recall: 0.14144632048423064
   F-measure: 0.08589357428512874
+
+=====
+MIN DF = 20
+=====
+
+[aps1@compute-0-111 modular-qa-pipeline-ankitshah009]$ bash  run_command_NBCount.sh
+Naive Bayes and count features
+
+(31049, 22864) (3139, 22864)
+[u'php' u'command-line' u'authentication' ... u'sharepoint' u'android'
+ u'version-control']
+ /home/aps1/.anaconda2/lib/python2.7/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+   'precision', 'predicted', average, warn_for)
+   /home/aps1/.anaconda2/lib/python2.7/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples.
+     'recall', 'true', average, warn_for)
+     Accuracy: 0.1624721248805352
+     Precision: 0.09646896100103765
+     Recall: 0.1624721248805352
+     F-measure: 0.10861498224993507
+
+========
+Min DF = 5,
+=======
+
+[aps1@compute-2-7 modular-qa-pipeline-ankitshah009]$ bash run_command_NBtfidf.sh
+Naive Bayes and TFIDF features
+(31049, 81856) (3139, 81856)
+[u'web' u's' u's' ... u'web' u's' u's']
+/home/aps1/.anaconda2/lib/python2.7/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+  Accuracy: 0.06307741318891366
+  Precision: 0.03709122059262094
+  Recall: 0.06307741318891366
+  F-measure: 0.01711633319122945
+
+=====
+Min DF = 5, Max df = 2000
+=====
+
+[aps1@compute-2-7 modular-qa-pipeline-ankitshah009]$ bash run_command_NBtfidf.sh
+Naive Bayes and TFIDF features
+(31049, 80383) (3139, 80383)
+[u'web' u's' u's' ... u'web' u's' u's']
+/home/aps1/.anaconda2/lib/python2.7/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+  Accuracy: 0.07008601465434852
+  Precision: 0.044642099547505754
+  Recall: 0.07008601465434852
+  F-measure: 0.03185804391101713
